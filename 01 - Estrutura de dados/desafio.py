@@ -4,8 +4,8 @@ import textwrap
 def menu():
     menu = """\n
     ================ MENU ================
-    [d]\tDepositar
-    [s]\tSacar
+    [d]\tDeposito
+    [s]\tSaque
     [e]\tExtrato
     [nc]\tNova conta
     [lc]\tListar contas
@@ -118,12 +118,12 @@ def main():
         opcao = menu()
 
         if opcao == "d":
-            valor = float(input("Informe o valor do depósito: "))
+            valor = float(input("Informe o valor para depósito: "))
 
             saldo, extrato = depositar(saldo, valor, extrato)
 
         elif opcao == "s":
-            valor = float(input("Informe o valor do saque: "))
+            valor = float(input("Informe o valor para saque: "))
 
             saldo, extrato = sacar(
                 saldo=saldo,
